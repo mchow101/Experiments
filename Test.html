@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Material Components for the web</title>
+    <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+  </head>
+
+  <body class="mdc-typography">
+    <h2 class="mdc-typography--display2">Hello, Material Components!</h2>
+    <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+      <div class="mdc-slider" tabindex="0" role="slider"
+	    aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+	    aria-label="Select Value">
+		  <div class="mdc-slider__track-container">
+		    <div class="mdc-slider__track"></div>
+		  </div>
+		  <div class="mdc-slider__thumb-container">
+		    <svg class="mdc-slider__thumb" width="21" height="21">
+		      <circle cx="10.5" cy="10.5" r="7.875"></circle>
+		    </svg>
+		    <div class="mdc-slider__focus-ring"></div>
+		  </div>
+		</div>
+    </div>
+  </body>
+ <script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+ <script>mdc.autoInit()</script>
+ <script type="text/javascript">import {MDCSlider} from '@material/slider';
+
+const slider = new MDCSlider(document.querySelector('.mdc-slider'));
+slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));</script>
+ </html>
